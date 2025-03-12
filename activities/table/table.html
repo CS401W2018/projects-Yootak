@@ -10,8 +10,9 @@
     <header><h1>Web Design</h1></header>
     <main>
         <h1>Tables</h1>
-        <table border="1">
-            <thread>
+        <table class="schedule">
+            <caption>Class Schedule</caption>
+            <thead>
                 <tr>
                     <th>Department</th>
                     <th>Number</th>
@@ -19,7 +20,7 @@
                     <th>Location</th>
                     <th>Credits</th>
                 </tr>
-            </thread>
+            </thead>
             <tbody>
                 <tr>
                     <th colspan="5">Winter 2025</th>
@@ -46,15 +47,20 @@
                     <td>P1</td>
                     <td>3</td>
                 </tr>
+            </tbody>
+            <tfoot>
                 <tr>
                     <th id="totalcredits" colspan="4">totalcredits</th>
                     <td headers="totalcredits">9</td>
                 </tr>
-            </tbody>
+            <tfoot>
         </table>
+        
         <P><b>When do you use a table? to see easily with tabular data.</b></P>
         <P>When do you not use a table? when the data is not the tabular data. test</P>
         <p>When do you need to do extra work for table accessibility? Go to check if the data is accessible to all users, especially those using screen readers or other assistive technologies.</p>
+        <p>Why don't we use the border attribute? the reason is that the layout changes whenever the size of all elements becomes ambiguous and the width of the border changes.</p>
+        <p>What is the easiest way to color every other row a different color?</p>
     </main>
     <footer>
         <p>&copy; 2025 Yootak Kim</p>
