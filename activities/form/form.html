@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <header><h1>Web Design</h1></header>
+    <main>
+        <form action="processing.html" method="get">
+            <div class="form-row">
+                <label for="fname">Full Name:</label>
+                <input type="text" name="fullname" id="fname">
+            </div>
+            <div class="form-row">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="form-row">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div clas="form-row">
+                <label for="state">State:</label>
+                <select name="state" id="state">
+                    <option value="blank"></option>
+                    <option value="CO">Colorado</option>
+                    <option value="HI" selected>Hawaii</option>
+                    <option value="UT">Utah</option>
+                </select>
+            </div>
+            <div>
+                <div>Year in School:</div>
+                <label><input type="radio" name="year1" value="freshman">Freshman</label>
+                <label><input type="radio" name="year2" value="freshman">Sophmore</label>
+                <label><input type="radio" name="year3" value="freshman">Junior</label>
+                <label><input type="radio" name="year4" value="freshman">Senior</label>
+            </div>
+            <div class="form-row">
+                <input type="submit">
+            </div>
+            <p>The form tag has an "action" attribute. What does it do?</p>
+            <p>The form tag has a "method" attribute. What does it do?</p>
+            <p>What is the difference between a "POST" and a "GET"?</p>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 Yootak Kim</p>
+    </footer>
+</body> 
+</html>
