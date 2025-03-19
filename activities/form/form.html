@@ -10,14 +10,16 @@
     <header><h1>Web Design</h1></header>
     <main>
         <form action="processing.html" method="get">
-            <div class="form-row">
-                <label for="fname">Full Name:</label>
-                <input type="text" name="fullname" id="fname">
-            </div>
-            <div class="form-row">
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email">
-            </div>
+            <fieldset>
+                <legend>Create Account</legend>
+                <div class="form-row">
+                    <label for="fname">Full Name:</label>
+                    <input type="text" name="fullname" id="fname">
+                </div>
+                <div class="form-row">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email">
+                </div>
             <div class="form-row">
                 <label for="password">Password:</label>
                 <input type="password" name="password" id="password" required>
@@ -31,20 +33,31 @@
                     <option value="UT">Utah</option>
                 </select>
             </div>
-            <div>
-                <div>Year in School:</div>
+            <div class="radio-row">
+                <div class="form-spacer">Year in School:</div>
                 <label><input type="radio" name="year1" value="freshman">Freshman</label>
                 <label><input type="radio" name="year2" value="freshman">Sophmore</label>
-                <label><input type="radio" name="year3" value="freshman">Junior</label>
+                <label><input type="radio" name="year3" value="freshman" checked>Junior</label>
                 <label><input type="radio" name="year4" value="freshman">Senior</label>
             </div>
+            <div class="radio-row">
+                <div class="form-spacer"></div>
+                <label><input type="checkbox" name="remember" id="remember" checked>Remember Me</label>
+            </div>
             <div class="form-row">
+                <label for="comments">Comments:</label>
+                <textarea name="comments" id="comments"></textarea>
+            </div>
+            <div class="form-row">
+                <div class="form-spacer"></div>
                 <input type="submit">
             </div>
+
             <p>The form tag has an "action" attribute. What does it do? when people put some data, it will go to the action field, where the form data will be processed.</p>
             <p>The form tag has a "method" attribute. What does it do? Depending on the method, people can hide or show their input.</p>
             <p>What is the difference between a "POST" and a "GET"? 'Post' make it hide, and 'Get' make it to be seen.</p>
         </form>
+        </fieldset>
     </main>
     <footer>
         <p>&copy; 2025 Yootak Kim</p>
