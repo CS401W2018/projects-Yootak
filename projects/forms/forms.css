@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f9f3;
+}
+
+main {
+    padding: 20px;
+}
+
+form {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+fieldset {
+    background-color: #e4f7ea;
+    border: 2px solid #6cbf84;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+legend {
+    background-color: #6cbf84;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.form-row label {
+    width: 150px;
+    text-align: right;
+}
+
+.form-row input:not([type="submit"], [type="radio"], [type="checkbox"]),
+.form-row select,
+.form-row textarea {
+    flex: 1;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #a8d5ba;
+    background-color: #f4fbf7;
+}
+
+.form-row textarea {
+    resize: vertical;
+}
+
+.form-row input[type="submit"] {
+    padding: 12px 24px;
+    background-color: #6cbf84;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-row input[type="submit"]:hover {
+    background-color: #58a96e;
+}
+
+.radio-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.radio-row .form-spacer {
+    width: 150px;
+    text-align: right;
+}
+
+.radio-row label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #e6f7ed;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #cce7d6;
+}
+
+@media only screen and (max-width: 600px) {
+    .form-row, .radio-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-row label,
+    .radio-row .form-spacer {
+        width: auto;
+        text-align: left;
+    }
+
+    .form-row input[type="submit"] {
+        width: 100%;
+        font-size: 18px;
+        padding: 16px;
+    }
+}
