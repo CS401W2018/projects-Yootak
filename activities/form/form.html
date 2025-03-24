@@ -9,12 +9,12 @@
 <body>
     <header><h1>Web Design</h1></header>
     <main>
-        <form action="processing.html" method="get">
+        <form action="processing.html" method="get" id="myForm">
             <fieldset>
                 <legend>Create Account</legend>
                 <div class="form-row">
                     <label for="fname">Full Name:</label>
-                    <input type="text" name="fullname" id="fname">
+                    <input type="text" name="fullname" id="fullname">
                 </div>
                 <div class="form-row">
                     <label for="email">Email:</label>
@@ -23,6 +23,10 @@
             <div class="form-row">
                 <label for="password">Password:</label>
                 <input type="password" name="password" id="password" required>
+            </div>
+            <div class="form-row">
+                <label for="age">Age:</label>
+                <input type="number" name="age" id="age">
             </div>
             <div clas="form-row">
                 <label for="state">State:</label>
@@ -53,8 +57,10 @@
                 <input type="submit">
             </div>
 
-            <p>What are different ways to style your form? 'form-row input:not([type="submit"])'---As you can see, you can control some specific location by using not([]).</p>
-            <p>Why does the professor like to use flex? Because it is easier to control many items which are same children. It will apply to all the children at the same tiem.</p>
+            <p>What is JavaScript? How did it get its name? JavaScript is an advanced programming language that runs on browsers and allows developers to perform a variety of tasks, such as creating dynamic web pages, processing user events, and modifying content. JavaScript was originally developed by Brendan Eich in Netscape in 1995, first called Mocha, and was later renamed LiveScript for a while. It was eventually renamed JavaScript as part of its marketing efforts.</p>
+            <p>What are the two ways you can run JavaScript? In the DOM(Document of model)& Node.js(Express.js)</p>
+            <p>What was the most popular front-end js library? jQuery</p>
+            <p>What is the most popular front-end js library today? React.js , Reactnative</p>
 
         </form>
         </fieldset>
@@ -62,5 +68,34 @@
     <footer>
         <p>&copy; 2025 Yootak Kim</p>
     </footer>
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert("Form submitted");
+            const fullname = document.getElementById('fullname').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const age = document.getElementById('age').value;
+            if(!fullname || !email) {
+                alert('Please enter your name and email');
+                return;
+            }
+
+            if (!age || age < 18) {
+                alert('You need to be 18');
+                return;
+            }
+
+            const formData = {
+                name: fullname,
+                email: email,
+                password: password,
+                age: age
+            }
+
+            
+            console.log(formData);
+        });
+    </script>
 </body> 
 </html>
