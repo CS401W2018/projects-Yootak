@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f2f2f2;
+  }
+  
+  header {
+    background-color: #0b0b86;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  main {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  fieldset {
+    border: none;
+  }
+  
+  legend {
+    background-color: #0b0b86;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+  }
+  
+  .form-row {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-row label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-row input[type="text"],
+  .form-row input[type="email"],
+  .form-row input[type="password"],
+  .form-row input[type="number"],
+  .form-row select,
+  .form-row textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .form-row input[type="submit"] {
+    background-color: #0b0b86;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .form-row input[type="submit"]:hover {
+    background-color: #2222aa;
+  }
+  
+  .radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-top: 5px;
+  }
+  
+  .checkbox-row {
+    padding-top: 10px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #0b0b86;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  @media (max-width: 600px) {
+    .form-row {
+      flex-direction: column;
+    }
+  
+    .radio-group {
+      flex-direction: column;
+    }
+  }
