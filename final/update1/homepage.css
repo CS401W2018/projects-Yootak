@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+  
+header {
+    background-color: #f2a154;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+nav a.active {
+  background-color: #f2a154;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+main {
+  padding: 1rem;
+}
+
+.breed-img {
+  width: 140px;
+  height: auto;
+  display: block;
+  margin: 0 auto 0.5rem auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #FFE5B4; 
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #FFF8DC; 
+}
+
+td div {
+  text-align: center;
+}
+  
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #000;
+  padding: 8px;
+  text-align: left;
+}
+
+table caption {
+  caption-side: top;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  tr {
+    margin-bottom: 1rem;
+  }
+
+  th {
+    background: #f2f2f2;
+  }
+
+  td {
+    padding-left: 50%;
+    position: relative;
+  }
+
+  td::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45%;
+    padding-left: 0.5rem;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  td:nth-of-type(1)::before { content: "Breed"; }
+  td:nth-of-type(2)::before { content: "Personality"; }
+  td:nth-of-type(3)::before { content: "Activity Level"; }
+  td:nth-of-type(4)::before { content: "Shedding"; }
+  td:nth-of-type(5)::before { content: "Beginner-Friendly"; }
+}
