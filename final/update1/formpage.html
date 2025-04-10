@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Dog Supplies</title>
+  <link rel="stylesheet" href="homepage.css">
+  <script src="form.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Happy Dog Life Guide</h1>
+  </header>
+
+  <nav>
+    <a href="homepage.html">Home</a>
+    <a href="page1.html">Before You Adopt</a>
+    <a href="page2.html">Breed Comparison</a>
+    <a href="page3.html">Daily Care</a>
+    <a href="page4.html">Training Tips</a>
+    <a href="formpage.html" class="active">Order Supplies</a>
+  </nav>
+
+  <main>
+    <form id="dogOrderForm" method="post">
+      <fieldset>
+        <legend>Order Dog Supplies</legend>
+
+        <div class="form-row">
+          <label for="ownerName">Your Name:</label>
+          <input type="text" id="ownerName" name="ownerName" required>
+        </div>
+
+        <div class="form-row">
+          <label for="dogName">Dog's Name:</label>
+          <input type="text" id="dogName" name="dogName" required>
+        </div>
+
+        <div class="form-row">
+          <label for="item">Choose Item:</label>
+          <select id="item" name="item" required>
+            <option value="">-- Select an item --</option>
+            <option value="Dog Food">Dog Food</option>
+            <option value="Toys">Toys</option>
+            <option value="Dog Bed">Dog Bed</option>
+            <option value="Leash & Collar">Leash & Collar</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" min="1" max="10" required>
+        </div>
+
+        <div class="form-row">
+          <label for="address">Delivery Address:</label>
+          <input type="text" id="address" name="address" required>
+        </div>
+
+        <div class="form-row">
+          <label for="notes">Special Instructions:</label>
+          <textarea id="notes" name="notes" rows="3"></textarea>
+        </div>
+
+        <div class="form-row checkbox-row">
+          <label><input type="checkbox" name="gift"> Mark as Gift</label>
+        </div>
+
+        <div class="form-row checkbox-row">
+          <label><input type="checkbox" name="agree" required> I agree to the terms and conditions</label>
+        </div>
+
+        <div class="form-row">
+          <input type="submit" value="Place Order">
+        </div>
+      </fieldset>
+    </form>
+
+    <div id="confirmation" style="margin-top:1rem; font-weight:bold;"></div>
+  </main>
+</body>
+</html>
