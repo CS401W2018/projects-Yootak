@@ -1,0 +1,30 @@
+div {
+    display: block;
+    grid-template-columns: auto;
+}
+
+header {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+    font-weight: bolder;
+    text-align: center;
+    background-color: aqua;
+    color:blue;
+    margin: 20px;
+    padding: 20px;
+    border: 3px solid black;
+}
+nav {
+    display: grid;
+    /*grid-template-columns: 1fr 3fr 5fr 7fr;      자동동간격 조정정 */
+    flex-direction: row; /* row 열 column 행 */
+    justify-content: center;
+    align-items: center;
+}
+
+.red {
+    background-color: red;     /*  class를 red로 설정 */
+}
+#black {
+    background-color: black;    /* id를 black으로 설정 */
+}
